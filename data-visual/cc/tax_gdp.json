@@ -1,0 +1,19 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "config": {"axis": {"grid": false}, "view": {"stroke": null}},
+  "description": "A scatterplot of GDP per capita and tax revenue across countries, 2019.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/avecreac/avecreac.github.io/refs/heads/main/tax_gdp_2019.csv"
+  },
+  "mark": "point",
+  "encoding": {
+    "x": {"field": "gdp_per_capita", "type": "quantitative", "scale": {"type": "log"}},
+    "y": {"field": "tax_revenue_gdp", "type": "quantitative", "scale": {"zero": false}},
+    "color": {"field": "region", "type": "nominal"},
+    "tooltip": [
+      {"field": "country"},
+      {"field": "gdp_per_capita"},
+      {"field": "tax_revenue_gdp"}
+    ]
+  }
+}
