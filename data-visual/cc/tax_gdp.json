@@ -1,5 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": 900,
+  "height": 550,
+  "autosize": {"type": "fit", "contains": "padding"},
   "config": {"axis": {"grid": false}, "view": {"stroke": null}},
   "description": "A scatterplot of GDP per capita and tax revenue across countries, 2019.",
   "data": {
